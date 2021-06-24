@@ -16,7 +16,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 KC_KP_7, KC_KP_8, KC_KP_9, TO(_NUMPAD),
                 KC_KP_4, KC_KP_5, KC_KP_6, TO(_RGB),
                 KC_KP_1, KC_KP_2, KC_KP_3, TO(_MACRO),
-                KC_KP_0, KC_KP_DOT, KC_KP_ENTER
+                KC_KP_0, KC_KP_DOT, KC_NUMLOCK
                 ),
     [_RGB] = LAYOUT(/* Base: First key reset SPIN */
                 RESET, KC_NO, KC_NO, KC_TRNS,
@@ -26,10 +26,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 ),
 
     [_MACRO] = LAYOUT(/* Base */
-                HELLO_WORLD1, HELLO_WORLD2, KC_NO, KC_TRNS,
-                KC_F19, KC_F20, KC_F21, KC_TRNS,
-                KC_F16, KC_F17, KC_F18, KC_TRNS,
-                KC_F13, KC_F14, KC_F15
+                KC_F7, KC_F8, KC_F9, KC_TRNS,
+                KC_F4, KC_F5, KC_F6, KC_TRNS,
+                KC_F1, KC_F2, KC_F3, KC_TRNS,
+                KC_NO, KC_NO, KC_NO
                 )
 };
 
