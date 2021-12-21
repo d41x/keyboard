@@ -26,8 +26,8 @@ enum layer_names {
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
-    QMKBEST = SAFE_RANGE,
-    QMKURL
+    MAILAD = SAFE_RANGE,
+    SCRP
 };
 
 
@@ -35,13 +35,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [_BASE] = LAYOUT(
         TO(_FN),
-        KC_1,    KC_2,    KC_3,
-        KC_4,    KC_5,    KC_6,    KC_0
+        KC_F4,    KC_F5,    KC_F6,
+        KC_F1,    KC_F2,    KC_F3,    KC_F11
     ),
     [_FN] = LAYOUT(
         TO(_MEDIA),
         RGB_TOG, RGB_MOD,  RGB_VAI,
-        QMKURL,  RGB_RMOD, RGB_VAD, QMKBEST
+        SCRP,  RGB_RMOD, RGB_VAD, MAILAD
     ),
     [_MEDIA] = LAYOUT(
         TO(_BASE),
@@ -52,20 +52,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case QMKBEST:
+        case MAILAD:
             if (record->event.pressed) {
-                // when keycode QMKBEST is pressed
-                SEND_STRING("QMK is the best thing ever!");
+                // when keycode MAILAD is pressed
+                SEND_STRING("*****@******");
             } else {
-                // when keycode QMKBEST is released
+                // when keycode MAILAD is released
             }
             break;
-        case QMKURL:
+        case SCRP:
             if (record->event.pressed) {
-                // when keycode QMKURL is pressed
-                SEND_STRING("https://qmk.fm/\n");
+                // when keycode SCRP is pressed
+                SEND_STRING("https://scrapbox.io/41keebs/");
             } else {
-                // when keycode QMKURL is released
+                // when keycode SCRP is released
             }
             break;
     }
